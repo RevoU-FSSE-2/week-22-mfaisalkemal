@@ -12,7 +12,7 @@ from todo.apis import todo_blueprint
 app = Flask(__name__)
 
 CORS(app)
-# Talisman(app)
+Talisman(app, force_https=False)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:your_root_password@34.142.252.30:3101/week-22-mfaisalkemal"
 db.init_app(app)

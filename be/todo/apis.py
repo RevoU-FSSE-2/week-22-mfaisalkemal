@@ -20,13 +20,16 @@ def create_todo():
     todo_priority = data.get("todoPriority")
     todo_due = data.get("todoDue")
 
+    date1 = datetime.strptime(todo_due, "%Y-%m-%d")
+    date2 = date1.strftime("%d/%m/%Y")
+
     user_id = get_jwt_identity()
 
     try:
         todo = Todo(
             task=todo_task,
-            priority=todo_priority,
-            due=datetime.strptime(todo_due, '%d/%m/%Y'),
+            priority=todo_priority.upper(),
+            due=datetime.strptime(date2, '%d/%m/%Y'),
             user_id=user_id
         )
         

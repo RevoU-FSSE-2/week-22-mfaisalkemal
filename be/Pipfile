@@ -12,6 +12,7 @@ flask-jwt-extended = "*"
 python-dotenv = "*"
 flask-cors = "*"
 flask-talisman = "*"
+gunicorn = "*"
 
 [dev-packages]
 
