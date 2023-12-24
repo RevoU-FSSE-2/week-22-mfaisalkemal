@@ -7,5 +7,5 @@ BE: http://34.142.252.30:3002/
 admin account
 ```
 username: admin
-password: admin123
+password: admin1234
 ```
